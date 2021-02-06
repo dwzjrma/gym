@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gym</title>
+<link href="bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</style>
+
+<style type="text/css"> 	
+
+
+<!--Style for home page-->
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 10;
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: #37d72f;
+}
+
+header .toggle {
+  max-width: 60px;
+  cursor: pointer;
+}
+
+header .toggle img {
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: #111;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: #37d72f;
+  transform-origin: top;
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.banner .textBox {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.banner .textBox h2 {
+  color: #fff;
+  font-size: 3em;
+}
+
+.banner .textBox p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 5px 0 25px;
+}
+
+.banner .textBox a {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.banner .imgBox {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  z-index: 2;
+}
+
+.banner .imgBox img {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  z-index: 100;
+}
+
+.sci {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.sci li a img {
+  transform: scale(0.5);
+  filter: invert(1);
+}
+
+@media (max-width: 1376px) {
+  .banner {
+    padding: 150px 50px 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  .banner {
+    padding: 150px 50px 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .banner::before {
+    width: 300px;
+    transform: skewX(-25px) translateX(50%);
+  }
+
+  .banner .textBox {
+    max-width: 100%;
+  }
+
+  .sci {
+    z-index: 1000;
+    left: initial;
+    right: 20px;
+    flex-direction: column;
+  }
+}
+
+
+
+<!--Style for nav bar-->
+* {box-sizing: border-box;max-width: 100%;font-family: 'Gruppo', cursive;}
+html,body {height: 49%;margin: 0;padding: 0;background:rgb(240,240,240)}
+
+.menu-icon {width: 50px;height: 50px;position: fixed;top: 0;right: 0;margin: 10px 15px;transform:scale(0.8);padding: 0;cursor: pointer;z-index:20}
+.menu-bar {width: 50px;height: 5px;background: rgb(190,190,190);position: absolute;transition: all 0.3s;}
+.menu-bar1 {margin-top: 9px}
+.menu-bar2 {margin-top: 23px}
+.menu-bar3 {margin-top: 37px}
+.menu-icon.hover .menu-bar1 {-webkit-transform: rotate(45deg) scaleX(0.7);margin-top: 22px;}
+.menu-icon.hover .menu-bar2 {opacity: 0}
+.menu-icon.hover .menu-bar3 {-webkit-transform: rotate(-45deg) scaleX(0.7);margin-top: 22px;}
+
+.menu {width: 100%;height: 100%;display: -webkit-flex;display: flex;-webkit-flex-wrap: wrap;flex-wrap: wrap;background-color:#111111;}
+.menu-con {-webkit-flex-grow: 1;flex-basis: 0;flex-grow: 1;display: -webkit-flex;display: flex;-webkit-justify-content:space-around;position:relative;top:-100%;transition:all 0.5s}
+.menu-con p:before {content: ""; display: block;position:absolute;top:0;left:0;z-index:1;width:100%;height: 100%;opacity: 1;background: rgba(0,0,0,0);-webkit-transition: all 0.5s;transition: all 0.5s;}
+.menu-con:hover p:before {background: rgba(0,0,0,0.2)}
+.menu-con p {height:20px;-webkit-align-self:center;color:white;font-size:25px;z-index:2;cursor:pointer}
+@media screen and (max-width: 600px) {.menu-con {min-width:50%}}
+@media screen and (max-width: 350px) {.menu-con {min-width:100%}}
+
+
+</style>
+
+
+<!--Insert HTML below-->
+<body>
+
+
+<!--Javascript for nav bar-->
+<script>
+var open = false;
+
+function Drop(n) {
+	var i;
+	if (open == false) {
+		for (i = n; i < 5; i++) {
+			Drp(i)
+		}
+		open = true
+	} else if (open == true) {
+		for (i = n; i < 5; i++) {
+			Cls(i)
+		}
+		open = false
+	}
+}
+
+function Drp(n) {
+	var elem = document.getElementsByClassName("menu-con")[n];
+	var pos = -1 * window.innerHeight - n * 100;
+	var id = setInterval(frame, 5);
+
+	function frame() {
+		if (pos >= -10) {
+			clearInterval(id);
+			elem.style.top = 0 + 'px';
+		} else {
+			pos += 10;
+			elem.style.top = pos + 'px';
+		}
+	}
+}
+
+function Cls(n) {
+	var elems = document.getElementsByClassName("menu-con")[n];
+	var poss = 0;
+	var ids = setInterval(frames, 5);
+
+	function frames() {
+		if (poss <= -1 * window.innerHeight) {
+			clearInterval(ids);
+			elems.style.top = -1 * window.innerHeight + 'px';
+		} else {
+			poss += -7 - n * 2;
+			elems.style.top = poss + 'px';
+		}
+	}
+}
+</script>
+<div class="menu-icon" onclick="this.classList.toggle('hover');Drop(0)">
+	<div class="menu-bar menu-bar1"></div>
+	<div class="menu-bar menu-bar2"></div>
+	<div class="menu-bar menu-bar3"></div>
+</div>
+<div class="menu">
+	<div class="menu-con" style="background:IndianRed;"><p>HOME</p></div>
+  <div class="menu-con" style="background:rgb(160,160,170);"><p>ABOUT</p></div>  
+  <div class="menu-con" style="background:mediumseagreen;"><p>PACKAGES</p></div> 
+  <div class="menu-con" style="background:teal;"><p>GALLERY</p></div> 
+  <div class="menu-con" style="background:rgb(70,70,70);"><p>CONTACT</p></div>
+</div>
+
+
+</body>
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Gym Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="" class="logo"><span>GYMM</span>BOXX</a>
+    <div class="toggle"><img src="https://geekywebidea.com/wp-content/uploads/2020/05/toggle.png" alt="" /></div>
+  </header>
+  <div class="banner">
+    <video src="https://geekywebidea.com/wp-content/uploads/2020/05/bg.mp4" autoplay muted loop type="mp4"></video>
+    <div class="textBox">
+<br>
+<center><iframe width="800" height="400" src="https://www.youtube.com/embed/EqEP5j5Dp2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <center><h2>Lifting the Commnunity</h2></center>
+<br>
+<br>
+      <p>We aim to bring fitness to your doorstep.</p>
+      <p>We provide a neighbourly, friendly and warm atmosphere for people of all ages.</p>
+      <p>We create the most conducive environment for you to get mad gains.</p>
+<br>
+<br>
+      <a href="#">Read More</a>
+    </div>
+    <div class="imgBox">
+      <img src="https://geekywebidea.com/wp-content/uploads/2020/05/man.png" alt="" />
+    </div>
+    <ul class="sci">
+      <li>
+        <a href="#"><img src="https://geekywebidea.com/wp-content/uploads/2020/05/facebook.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://geekywebidea.com/wp-content/uploads/2020/05/twitter.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://geekywebidea.com/wp-content/uploads/2020/05/instagram.png" alt="" /></a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
