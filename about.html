@@ -230,7 +230,76 @@ html,body {height: 40%;margin: 0;padding: 0;background:rgb(240,240,240)}
     }
 
 
+.pricing {
+	text-align: center;
+	border: 1px solid #f0f0f0;
+	color: white;
+	font-size: 14px;
+	padding-left: 0;
+	margin-bottom: 30px;
+  font-family: 'Lato';
+width: 1000px;
+}
 
+.pricing img {
+	display: block;
+	margin: auto;
+	width: 32px;
+}
+.pricing li:first-child,
+.pricing li:last-child {
+	padding: 20px 13px;
+}
+.pricing li {
+	list-style: none;
+	padding: 13px;
+}
+.pricing li + li {
+	border-top: 1px solid #f0f0f0;
+}
+.pricing big {
+	font-size: 32px;
+}
+.pricing h3 {
+	margin-bottom: 0;
+  font-size: 36px;
+}
+.pricing span {
+	font-size: 12px;
+	color: #white;
+	font-weight: normal;
+}
+.pricing li:nth-last-child(2) {
+	padding: 30px 13px;
+}
+.pricing button {
+	width: auto;
+	margin: auto;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 50px;
+	color: #fff;
+	padding: 9px 24px;
+	background: #aaa;
+	opacity: 1;
+	transition: opacity .2s ease;
+  border: none;
+  outline: none;
+}
+.pricing button:hover {
+	opacity: .9;
+}
+.pricing button:active {
+	box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+/* pricing color */
+.p-green big,
+.p-green h3 {
+	color: #4c7737;
+}
+.p-green button {
+	background: #4c7737;
+}
 </style>
 
 
@@ -293,8 +362,13 @@ Located at JCube, Level 3 (Near Jurong East MRT). This GYMMBOXX outlet has all t
 #03-04/06
 S(609731)</p>
 <br>    	    
-	    
-<div style="width: 200px; float:left; height:300px; background:black; margin:10px">
+
+	    <section class="container">
+  <div class="row white">
+				<div class="block">
+
+	    <ul class="pricing p-green">
+<li><div style="width: 200px; float:left; height:300px; background:black; margin:10px">
 <img class="mySlides" src="10.jpg" style="width:100%">
 </div>
 <div style="width: 200px; float:left; height:300px; background:black; margin:10px">
@@ -310,8 +384,10 @@ S(609731)</p>
 <hr>
 <div style="width: 200px; float:left; height:300px; background:black; margin:10px">
 <img class="mySlides" src="14.jpg" style="width:100%">
-</div>
-	    
+	</div></li>
+</ul>	    
+</div><!-- /block -->
+			</div><!-- /row -->
 	    
 
       
